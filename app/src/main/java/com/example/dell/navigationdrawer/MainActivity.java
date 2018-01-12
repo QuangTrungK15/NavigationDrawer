@@ -20,11 +20,18 @@ public class MainActivity extends AppCompatActivity {
         toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        //retrieve a reference to this activity's ActionBar.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        addControls();
+    }
+
+    private void addControls() {
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if(toggle.onOptionsItemSelected(item))
             return true;
         return super.onOptionsItemSelected(item);
